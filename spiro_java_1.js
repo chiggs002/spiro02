@@ -38,7 +38,7 @@ inoiseB=noise(istepB);
     //fullscreen()
     background(0);
   
-    numberSpiro =4;
+    numberSpiro =1;
     //spirographs = new ArrayList<Spirograph>();
 
    //setup dark followers
