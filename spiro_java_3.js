@@ -70,7 +70,7 @@ function  setup() {
 
 function draw(){
 	 push();
-	 s = "Move the mouse l-to-r and/or drag up or down.\nPress the 'r' key to clear the screen";
+	 s = "Move the mouse l-to-r and/or drag up or down.\nPress the ' R ' or ' r ' key to clear the screen";
    fill(255,255);
    textSize(15);
    text(s, 30, 30, 200, 280); 
@@ -277,6 +277,10 @@ function keyPressed() {
   }
   
   if (key=='r') {
+  background(000);  
+  }
+  
+  if (key=='R') {
   background(000);  
   }
   
