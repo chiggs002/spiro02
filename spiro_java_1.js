@@ -85,7 +85,7 @@ function draw(){
      }// for
 
     // INCREASE ROTATION VALUE
-    increase += 0.004;
+    increase += 0.001;
 	
    
 	
@@ -214,7 +214,7 @@ this.spiroGrapgh2 =   function(iR,ir,im,iincrem) {
     fill(this.r,this.g,this.b,255*this.myalpha);
   
     //stroke(0);
-    strokeWeight(1);
+    strokeWeight(1*this.myalpha);
     noFill();
     beginShape();
     //background(255);
