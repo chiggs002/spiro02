@@ -22,23 +22,55 @@ let inoiseB;
 //float b=23;
 
 
+function keyPressed() {
+	print("KEYPRESSED");
+	if (key =='r') {
+		
+		print("r selected");
+		background(0);
+	}
+	
+	 if (key=='z') {
+     m = map(mouseX,0,width,0,1);
+     print ("m = ",m);
+  }
+  
+ 
+  
+   if (key=='s') {
+      saveFrame("spiro06I_######.png");
+    
+  }
+	
+  if (key === LEFT_ARROW) {
+		print ("left ARROW ");
+		 background(0); 
+    value = 255;
+  } else if (key === RIGHT_ARROW) {
+		print ("right ARROW ");
+    value = 0;
+		 background(0); 
+  }
+}
+
+
 
 function  setup() {
 istepR= int(random(2367));
 istepG= int(random(3412));
 istepB= int(random (6767));
-	print("istepR =",istepR,"istepG =",istepG,"istepB =",istepB,);
+	//print("istepR =",istepR,"istepG =",istepG,"istepB =",istepB,);
 
 inoiseR=noise(istepR);
 inoiseG=noise(istepG);
 inoiseB=noise(istepB);
-		print("inoiseR =",inoiseR,"inoiseG =",inoiseG,"inoiseB =",inoiseB,);
+		//print("inoiseR =",inoiseR,"inoiseG =",inoiseG,"inoiseB =",inoiseB,);
     //size(800,800);
     createCanvas(800, 800);
     //fullscreen()
     background(0);
   
-    numberSpiro =1;
+    numberSpiro =2;
     //spirographs = new ArrayList<Spirograph>();
 
    //setup dark followers
