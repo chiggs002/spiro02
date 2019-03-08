@@ -3,6 +3,14 @@ let increase;
 let m;
 let numberSpiro;
 let spirographs = [];
+let istepR;
+let istepG;
+let istepB;
+
+let inoiseR;
+let inoiseG;
+let inoiseB;
+		
 
 
 //let balls = [];
@@ -16,6 +24,15 @@ let spirographs = [];
 
 
 function  setup() {
+	istepR= int(random(2367));
+	istepG= int(random(3412));
+	istepB= int(random (6767));
+	print("istepR =",istepR,"istepG =",istepG,"istepB =",istepB,);
+
+	inoiseR=noise(istepR);
+	inoiseG=noise(istepG);
+	inoiseB=noise(istepB);
+	print("inoiseR =",inoiseR,"inoiseG =",inoiseG,"inoiseB =",inoiseB,);
     //size(800,800);
     createCanvas(800, 800);
     //fullscreen()
@@ -68,7 +85,7 @@ function draw(){
      }// for
 
     // INCREASE ROTATION VALUE
-    increase += 0.01;
+    increase += 0.004;
 	
    
 	
@@ -122,19 +139,27 @@ function draw(){
 		
      this.scaleFact =100;
   
-     this.stepR= int(random(2367));
-     this.stepG= int(random(3412));
-     this.stepB= int(random (6767));
+//      this.stepR= int(random(2367));
+//      this.stepG= int(random(3412));
+//      this.stepB= int(random (6767));
 
-     this.noiseR=noise(this.stepR);
-     this.noiseG=noise(this.stepG);
-     this.noiseB=noise(this.stepB);
+//      this.noiseR=noise(this.stepR);
+//      this.noiseG=noise(this.stepG);
+//      this.noiseB=noise(this.stepB);
+		
+	 this.stepR= istepR;
+     this.stepG= istepG;
+     this.stepB= istepB;
+
+     this.noiseR=inoiseR;
+     this.noiseG=inoiseG;
+     this.noiseB=inoiseB;
   
      this.myOffset= offset;
      this.myNumber= number;
      this.totalOffset = offset * 20;
      this.myalpha = 1-(offset +1)/number+ (1/number);
-     print ("myNumber=",this.myNumber,"0ffset =",this.offset,"totalOffset = ",this.totalOffset ,"myalpha =",this.myalpha);
+     //print ("myNumber=",this.myNumber,"0ffset =",this.offset,"totalOffset = ",this.totalOffset ,"myalpha =",this.myalpha);
 
   
 
