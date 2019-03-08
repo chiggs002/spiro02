@@ -10,7 +10,7 @@ let istepB;
 let inoiseR;
 let inoiseG;
 let inoiseB;
-    
+		
 
 
 //let balls = [];
@@ -24,21 +24,21 @@ let inoiseB;
 
 
 function  setup() {
-  istepR= int(random(2367));
-  istepG= int(random(3412));
-  istepB= int(random (6767));
-  //print("istepR =",istepR,"istepG =",istepG,"istepB =",istepB,);
+istepR= int(random(2367));
+istepG= int(random(3412));
+istepB= int(random (6767));
+	print("istepR =",istepR,"istepG =",istepG,"istepB =",istepB,);
 
-  inoiseR=noise(istepR);
-  inoiseG=noise(istepG);
-  inoiseB=noise(istepB);
-  //print("inoiseR =",inoiseR,"inoiseG =",inoiseG,"inoiseB =",inoiseB,);
+inoiseR=noise(istepR);
+inoiseG=noise(istepG);
+inoiseB=noise(istepB);
+		print("inoiseR =",inoiseR,"inoiseG =",inoiseG,"inoiseB =",inoiseB,);
     //size(800,800);
     createCanvas(800, 800);
     //fullscreen()
     background(0);
   
-    numberSpiro =2;
+    numberSpiro =4;
     //spirographs = new ArrayList<Spirograph>();
 
    //setup dark followers
@@ -65,7 +65,7 @@ function  setup() {
 function draw(){
   
     background(0);
-   //spirogrpah varaibles
+	 //spirogrpah varaibles
     Rad = map(mouseY,0,height,50,height/2);
     rad = map(mouseX,0,width,20,width/2);
     //print(" Rad = ", Rad," rad = ", rad);
@@ -73,10 +73,10 @@ function draw(){
 //print("draw spirogrphs");
     //SPRIO ONLY
     for (let i = 0; i < spirographs.length; i++) {
-      //print("draw spirogrphs");
+			//print("draw spirogrphs");
          // Create a temporary arraylist to hold values of each particle class
          //Spirograph v = spirographs.get(i);
-       // spirographs[i].myPrint();
+			 // spirographs[i].myPrint();
         spirographs[i].spiroGrapgh2(Rad,rad,m,increase);
         spirographs[i].changecolor();
          // spiroGrapgh2(Rad,rad,m,increase);
@@ -85,65 +85,11 @@ function draw(){
      }// for
 
     // INCREASE ROTATION VALUE
-    increase += 0.001;
-  
+    increase += 0.004;
+	
    
-  
+	
 }//draw
-
-
-
-function keyTyped() {
-print("KEY  typed");
-  if (key === 'r') {
-      background(0);  
-  } 
-  
-}
-
-
-
-function  keyPressed() {
-// function  keyReleased() {
-//function keyTyped() {
-	print("KEUYPRESSED");
-  if (keyCode=='z') {
-     m = map(mouseX,0,width,0,1);
-     println ("m = ",m);
-  }
-  
-  if (key==='r') {
- background(0);  
-  }
-  
-	if (keyCode==114) {
- background(0);  
-  }
-  
-	
-	
-	if (value===81) {
-  background(0);  
-  }
-   if (keyCode==='s') {
-      saveFrame("spiro06I_######.png");
-    
-  }
-  
-  
-  
-
-  //println("sep ",sep);
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -186,11 +132,11 @@ function  keyPressed() {
      this.r=222;
      this.g=12;
      this.b=23;
-     this.rb=1;
+		 this.rb=1;
      this.bb=1;
      this.gb=1;
 
-    
+		
      this.scaleFact =100;
   
 //      this.stepR= int(random(2367));
@@ -200,8 +146,8 @@ function  keyPressed() {
 //      this.noiseR=noise(this.stepR);
 //      this.noiseG=noise(this.stepG);
 //      this.noiseB=noise(this.stepB);
-    
-   this.stepR= istepR;
+		
+		this.stepR= istepR;
      this.stepG= istepG;
      this.stepB= istepB;
 
@@ -218,8 +164,8 @@ function  keyPressed() {
   
 
      this.myPrint =   function() {
-     //print("------------------------MY PRINT TESTS,,,,,,");
-  
+	   print("------------------------MY PRINT TESTS,,,,,,");
+	
      }
 
 
@@ -245,7 +191,7 @@ this.spiroGrapgh2 =   function(iR,ir,im,iincrem) {
     this.rad = ir;
     this.m = im;
     this.increm = iincrem;
-    //print("...............................SPIROGRAPH 2");
+	  //print("...............................SPIROGRAPH 2");
      
     //void spiroGrapgh2(float R,float r,float m,float increm){
     //spirogrpah varaibles
@@ -263,9 +209,8 @@ this.spiroGrapgh2 =   function(iR,ir,im,iincrem) {
     smooth();
     //fill(4,1);
     // SET THE STROKE COLOR CONTINOUSLY
-    //print("====================RGB = ",int(this.r),int(this.g),int(this.b));
-    alpha(255*this.myalpha);
-    stroke(this.r, this.g, this.b, 255*this.myalpha );
+		//print("====================RGB = ",int(this.r),int(this.g),int(this.b));
+    stroke(this.r, this.g, this.b, 255 *this.myalpha);
     fill(this.r,this.g,this.b,255*this.myalpha);
   
     //stroke(0);
@@ -283,16 +228,16 @@ this.spiroGrapgh2 =   function(iR,ir,im,iincrem) {
  
     this.circDiv= map(this.R,0,height,14,20);
  
-    //LOOP 
-  
+	  //LOOP 
+	
     for(let i=0;i<this.circDiv*PI;i+= (PI/105)) {
         this.angle = i;
-        //print("this.x=",this.x,"this.y=",this.y);
+  			//print("this.x=",this.x,"this.y=",this.y);
         //vertex((50+20*noise(i,ameobaNoiseY))*cos(i),(50+20*noise(i,ameobaNoiseY))*sin(i));
         this.x = (this.R-this.rad) * cos(this.angle) + this.l * cos( this.ratio * this.angle);
         this.y = (this.R-this.rad) * sin(this.angle) -  this.l * sin( this.ratio * this.angle);
         ellipse(this.x,this.y,10,10);
-        
+				
     } //end for
 
 
@@ -376,17 +321,17 @@ this.spiroGrapgh1 =   function(iR,ir,im,iincrem) {
 
 
  //this.spiroGrapgh1 =   function(iR,ir,im,iincrem) {
-    //
-    //
-    //  spirographs[i].changecolor();
+		//
+		//
+		//  spirographs[i].changecolor();
 this.changecolor  = function() {
 //void changecolor (){
     // CHANGE COLSTROKE OVER TIME
-    //print("CHNge color");
-    this.r-=this.noiseR*this.rb*0.5;
-    this.g-=this.noiseG*this.gb*0.5;
-    this.b-=this.noiseB*this.bb*0.5;
-  
+  	//print("CHNge color");
+	  this.r-=this.noiseR*this.rb;
+    this.g-=this.noiseG*this.gb;
+    this.b-=this.noiseB*this.bb;
+	
   
     // IF RGB VALUES GO OUT OF RANGE COUNT IN REVERSE AND RESET RGB SCALE FACTOR VALUE
     if ((this.r<3) ||  (this.r>253)){
