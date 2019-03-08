@@ -21,7 +21,7 @@ function  setup() {
     //fullscreen()
     background(0);
   
-    numberSpiro =2;
+    numberSpiro =4;
     //spirographs = new ArrayList<Spirograph>();
 
    //setup dark followers
