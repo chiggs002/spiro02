@@ -1,2 +1,2 @@
-# spiro01
+# spiro02
 Showing the locus of a classical Spirogragh
