@@ -49,7 +49,8 @@ function  setup() {
   
 	
   //cresize(800,800);
-	createCanvas(800,800);
+	//createCanvas(800,800);
+	  createCanvas(windowWidth, windowHeight);
   background(0);
   increase = 0;
   m=0.5;
